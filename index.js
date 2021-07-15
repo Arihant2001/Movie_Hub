@@ -3,8 +3,8 @@ const app = express();
 const hbs = express();
 const cors = require('cors');
 const path = require('path');
-const dotenv = require('dotenv');
-dotenv.config();
+//const dotenv = require('dotenv');
+//dotenv.config();
 const {movieRouter} = require('./routes/movie_search');
 const {movieinforouter} = require('./routes/movieinforoute');
 
@@ -26,6 +26,8 @@ app.get('/',(req,res) => {
 app.use('/movie_search',movieRouter);
 app.use('/result',movieinforouter);
 
-app.listen(process.env.PORT,() => {
-    console.log(`App running at: http://localhost:${process.env.PORT})`)
+const PORT = process.env.PORT || 3001;
+
+app.listen(PORT,() => {
+    console.log(`App running at: http://localhost:${PORT})`)
 });
