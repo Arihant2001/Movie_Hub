@@ -1,0 +1,33 @@
+<%- include('../partials/header')%>
+<div>
+    <div class="img">
+        <img src=<%=movieurl%>>
+        <h3><%=title%></h3>
+        <br>
+        <p>Rating: <%=rating%></p>
+    </div>
+    <div class="info">
+        <p>
+            <h2>Overview</h2>
+            <br>
+            <%=overview%>
+            <br>
+            <p>
+                Genre: <% for(let i=0;i<genre.length;i++){%>
+                <%=genre[i]%>
+                <%if(i!=genre.length-1){%>
+                    <p> , </p>
+                <%}
+                else{%>
+                    <p> . </p>
+                <%}%>
+                <%}%>
+            </p>
+        </p>
+        <p>
+            <%=tagline%>
+        </p>
+    </div>
+</div>
+
+<%- include('../partials/footer')%>

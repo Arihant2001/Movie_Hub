@@ -1,0 +1,82 @@
+*,
+*::before,
+*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    font-size: 62.5%;
+}
+body{
+    width: 100vw;
+    height: 100%;
+    background: red;
+    /* overflow-x: hidden; */
+}
+.nav__container{
+    position: relative;
+    width: 100%;
+    height: 5rem;
+    background: yellowgreen;
+    max-width: 100vw;
+}
+.nav__list{
+    position: relative;
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    font-size: 2rem;
+    height: 5rem;
+    width: auto; 
+    align-items: center;
+    padding: 0rem 2rem;
+}
+.nav__list li{
+    margin-left: 2rem;
+    float: left;
+    position: relative;
+}
+.nav__list li:first-of-type{
+    margin: 3rem;
+}
+.nav__list li:nth-of-type(5){
+    margin-left: auto;
+}
+
+
+.nav__link:link,
+.nav__link:visited{
+    text-decoration: none;
+    color: #fff;
+}
+
+.grid__container{
+    position: relative; 
+    margin: 3vw;
+    padding: 3rem;
+    width: 94vw;
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    background: pink;
+    gap: 3rem;
+}
+.card{
+    background: teal;
+    height: 40rem;
+    display: flex;
+    flex-direction: column;
+    
+    align-items: center;    
+}
+.card__img{
+    height: 35rem;
+    width: 100%;
+    background: burlywood;
+}
+.card__title{
+    font-size: 1.4rem;
+    height: 5rem;
+    padding: 1.5rem;
+}
