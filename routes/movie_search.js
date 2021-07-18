@@ -3,10 +3,8 @@ const movieRouter = express.Router();
 const dotenv=require('dotenv');
 dotenv.config();
 const moviedata= require('../services/moviedata');
-const{response}=require('express');
-const app = express();
-
-
+//const{response}=require('express');
+//const app = express();
 let imagepath = 'https://image.tmdb.org/t/p/w185/';
 
 movieRouter.post('/',async function(req,res,next) {
@@ -14,9 +12,7 @@ movieRouter.post('/',async function(req,res,next) {
         let movie_name=[];
         let movie_url=[];
         let id=[];
-        let response;
-        let results = [];
-        response = await moviedata.getresults(req.body.movieName);
+        let response = await moviedata.getresults(req.body.movieName);
         for(let i=0;i<response.results.length;i++){
             const element = response.results[i];
             if(element.backdrop_path!=null && element.poster_path!=null && element.release_date!=null){

@@ -1,7 +1,7 @@
 const dotenv = require('dotenv');
 const axios = require('axios');
 
-//dotenv.config();
+dotenv.config();
 
 async function getresults(movie_search){
     const url = `https://api.themoviedb.org/3/search/movie?api_key=${process.env.API_KEY}&query=${movie_search}`;

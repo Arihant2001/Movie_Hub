@@ -1,6 +1,7 @@
 const express = require('express');
 const movieinforouter = express.Router();
-
+const dotenv=require('dotenv');
+dotenv.config();
 const movieinfo = require('../services/movieinfo');
 movieinforouter.get('/:id',async function(req,res,next){
     try{
