@@ -1,11 +1,13 @@
 <%- include('../partials/header')%>
 <div>
     <div class="grid__container1">
-        <div class="pic">
-            <img src=<%=movieurl%>>
+        <div class="pic-card">
+            <div class="pic">
+                <img src=<%=movieurl%>>
+            </div>
         </div>
         <div class="specs">
-            <h1><%=title%></h1>
+            <h1><b><%=title%></b></h1>
             <%=tagline%><br>
             <b>Rating: </b><%=rating%><br>
             <b>Genre: </b><% for(let i=0;i<genre.length;i++){%>
