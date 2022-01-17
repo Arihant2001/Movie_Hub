@@ -5,5 +5,5 @@
 
 - Web Application which explores specifications of movies from all over the world.<br/>
 - The user can enter (part of) the name of any movie and explore all the movies with that (specific part of the) name.<br/>
-- Has **Responsive design**.<br/>
+- **Responsive design**.<br/>
 - **LIVE** at **[Heroku](https://movie-hub-app.herokuapp.com/)**
