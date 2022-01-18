@@ -1,13 +1,5 @@
 @media(max-width: 699.99px){
-    .name{
-        width: 97%;
-        height: 40px;
-        border-radius: 15px;
-        background-color: white;
-        font-size: large;
-        padding-left: 5px;
-    }
-    .find{
+    .name, .find{
         width: 97%;
         height: 40px;
         border-radius: 15px;
@@ -16,53 +8,25 @@
         font-weight: bold;
         padding-left: 5px;
     }
-
     .grid__container1{
         padding: 10px;
         width: 100%;
-        height: auto;
         display: grid;
         gap: 10px;
     }
-    .pic{
+    .pic, .pic > img{
         height: 100%;
         width: 100%;
         border-radius: 20px;
     }
-    .pic > img{
-        height: 100%;
-        width: 100%;
-        border-radius: 20px;
-    }
-    .pic-card{
-        background-color: white;
-        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-        transition: 0.3s;
-        text-align: center;
-        padding: 10px;
-        align-items: center;
-        border-radius: 20px;
-    }
-    .specs{
+    .pic-card, .specs, .info{
         font-size: 20px;
         background-color: white;
         box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-        transition: 0.3s;
-        width: 100%;
         padding: 10px;
         text-align: center;
         border-radius: 20px;
     }
-    .info{
-        font-size: 20px;
-        background-color: white;
-        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-        transition: 0.3s;
-        padding: 10px;
-        text-align: center;
-        border-radius: 20px;
-    }
-
     .grid__container{
         padding: 7px;
         width: 100%;
@@ -71,13 +35,13 @@
         flex-wrap: wrap;
         grid-template-columns: auto auto;
         gap: 10px;
+        justify-content: space-around;
     }
     .card{
         background-color: white;
         box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-        transition: 0.3s;
         height: auto;
-        width: 48%;
+        width: 49%;
         text-align: center;
         border-radius: 20px;
     }
@@ -93,95 +57,56 @@
     }
 }
 @media(min-width: 700px){
-    .name{
+    .name, .find{
         width: 250px;
         height: 35px;
         border-radius: 10px;
         background-color: white;
-        font-size: large;
-        padding-left: 5px;
-    }
-    .find{
-        width: 250px;
-        height: 35px;
-        border-radius: 10px;
-        background-color: white;
-        font-size: large;
+        font-size: medium;
         font-weight: bold;
         padding-left: 5px;
     }
-
     .grid__container1{
-        padding-left: 15%;
-        padding-right: 15%;
-        padding-top: 5%;
-        padding-bottom: 1%;
+        padding: 5% 15% 1% 15%;
         width: 100%;
-        height: auto;
         display: grid;
         grid-template-columns: 300px auto;
         grid-template-rows: auto auto;
         justify-content: space-around;
         gap: 10px;
     }
-    .pic{
+    .pic, .pic > img{
         height: 100%;
         width: 100%;
         border-radius: 10px;
     }
-    .pic > img{
-        height: 100%;
-        width: 100%;
-        border-radius: 10px;
-    }
-    .pic-card{
-        background-color: white;
-        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-        transition: 0.3s;
-        text-align: center;
-        padding: 10px;
-        align-items: center;
-        border-radius: 10px;
-    }
-    .specs{
+    .pic-card, .specs, .info{
         font-size: 20px;
         background-color: white;
         box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-        transition: 0.3s;
         width: 100%;
         padding: 20px;
         text-align: center;
         border-radius: 10px;
+    }
+    .pic-card{
+        padding: 10px;
     }
     .info{
         grid-column-start: 1;
         grid-column-end: 3;
-        font-size: 20px;
-        background-color: white;
-        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-        transition: 0.3s;
-        padding: 20px;
-        text-align: center;
-        border-radius: 10px;
     }
-
     .grid__container{
-        padding-left: 60px;
-        padding-right: 60px;
-        padding-top: 50px;
-        padding-bottom: 50px;
+        padding: 50px 60px 50px 60px;
         width: 100%;
-        height: auto;
         display: flex;
         flex-wrap: wrap;
         gap: 35px 5%;
         justify-content: space-around;
-        transition: 0.5s;
     }
     .card{
         background-color: white;
         box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-        transition: 0.3s;
         height: auto;
         padding-top: 3px;
         width: 260px;
@@ -197,14 +122,6 @@
         height: 100%;
         width: auto;
         border-radius: 10px;
-    }
-}
-#turn {
-    display: none;
-} 
-@media (orientation: landscape) {
-    #turn {
-        display:block;
     }
 }
 .find:hover {
@@ -223,15 +140,9 @@ body{
     justify-content: center;
 }
 @keyframes gradient {
-    0% {
-        background-position: 0% 50%;
-    }
-    50% {
-        background-position: 100% 50%;
-    }
-    100% {
-        background-position: 0% 50%;
-    }
+    0%  {background-position: 0% 50%;}
+    50% {background-position: 100% 50%;}
+    100%{background-position: 0% 50%;}
 }
 .nav_container{
     display: grid;
@@ -240,21 +151,18 @@ body{
     z-index: 1;
     position: fixed;
     background: white;
-    border-bottom-left-radius: 20px;
-    border-bottom-right-radius: 20px;
+    border-radius: 0 0 20px 20px;
     grid-template-columns: auto auto auto;
     align-items: center;
+    box-shadow: 0 6px 6px 0 black;
+    cursor: default;
 }
 .nav_list{
     font-size: 20px;
     align-items: center;
     color: blue;
 }
-a:link {
-    color: blue;
-    text-decoration: none;
-}
-a:visited {
+a:link, a:visited, a:active {
     color: blue;
     text-decoration: none;
 }
@@ -262,15 +170,9 @@ a:hover {
     color: deepskyblue;
     text-decoration: none;
 }
-a:active {
-    color: blue;
-    text-decoration: none;
-}
 .card:hover {
     box-shadow: 0 8px 8px 0 black;
     cursor: pointer;
-}
-.nav_container:hover {
-    box-shadow: 0 8px 8px 0 black;
-    cursor: default;
+    transition: transform 0.5s;
+    transform: scale(1.01);
 }
